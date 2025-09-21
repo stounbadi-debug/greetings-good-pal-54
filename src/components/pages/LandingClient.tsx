@@ -11,7 +11,11 @@ export default function LandingClient() {
 
   const handleGetStarted = () => {
     setIsLoading(true)
-    navigate('/discover')
+    navigate('/platform')
+  }
+
+  const handleEnterpriseDemo = () => {
+    navigate('/platform/content-performance')
   }
 
   return (
@@ -62,11 +66,11 @@ export default function LandingClient() {
             
             <Button 
               variant="outline"
-              onClick={() => navigate('/discover')}
+              onClick={handleEnterpriseDemo}
               className="px-12 py-6 bg-gradient-card backdrop-blur-md border border-border/60 text-foreground rounded-2xl font-bold text-xl shadow-card hover:shadow-glow transition-all duration-500 animate-slide-up electric-accent font-inter"
             >
               <Brain className="w-6 h-6 mr-2" />
-              Try AI Recommendations
+              Enterprise Intelligence
             </Button>
           </div>
         </div>
